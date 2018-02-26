@@ -54,7 +54,7 @@ class Device(object):
     # mac_addr is a string, with the ":" and everything.
     # service is an integer that maps to a service type. See SERVICE_IDS in msgtypes.py
     # source_id is a number unique to this client, will appear in responses to this client
-    def __init__(self, mac_addr, ip_addr, service, port, source_id, verbose=False):
+    def __init__(self, mac_addr, ip_addr, service, port, source_id, verbose=True):
         self.verbose = verbose
         self.mac_addr = mac_addr
         self.port = port
