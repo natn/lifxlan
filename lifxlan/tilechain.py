@@ -137,33 +137,36 @@ class TileChain(Light):
 
     # THIS DOESN'T WORK WITH GAPS
     def get_tile_map(self, num_tiles):
-        tile_width = 8 #TO DO: get these programmatically for each light from the tile info
-        tile_height = 8 #TO DO: get these programmatically for each light from the tile info
-        (x, y) = self.get_canvas_dimensions(num_tiles)
-        #print(x, y)
-        tile_map = [[0 for i in range(x)] for j in range(y)]
+        try:
+            self.tile_map
+        except:
+            tile_width = 8 #TO DO: get these programmatically for each light from the tile info
+            tile_height = 8 #TO DO: get these programmatically for each light from the tile info
+            (x, y) = self.get_canvas_dimensions(num_tiles)
+            #print(x, y)
+            tile_map = [[0 for i in range(x)] for j in range(y)]
 
-        tiles = self.get_tile_info()
-        x_vals, y_vals = self.get_xy_vals(num_tiles)
-        x_vals = self.shift_axis_upper_left(x_vals)
-        y_vals = self.shift_axis_upper_left(y_vals, is_y=True)
+            tiles = self.get_tile_info()
+            x_vals, y_vals = self.get_xy_vals(num_tiles)
+            x_vals = self.shift_axis_upper_left(x_vals)
+            y_vals = self.shift_axis_upper_left(y_vals, is_y=True)
 
-        for i in range(num_tiles):
-            tile = tiles[i]
-            x_start_tilespan = x_vals[i]
-            y_start_tilespan = y_vals[i]
-            #print(i, x_start_tilespan, y_start_tilespan)
-            x_start_pixel = int(x_start_tilespan * tile_width)
-            y_start_pixel = int(y_start_tilespan * tile_height)
-            for j in range(y_start_pixel, y_start_pixel + tile_width):
-                for k in range(x_start_pixel, x_start_pixel + tile_height):
-                    j0 = j - y_start_pixel
-                    k0 = k - x_start_pixel
-                    tile_map[j][k] = (i, (j0*tile_width + k0))
+            for i in range(num_tiles):
+                tile = tiles[i]
+                x_start_tilespan = x_vals[i]
+                y_start_tilespan = y_vals[i]
+                #print(i, x_start_tilespan, y_start_tilespan)
+                x_start_pixel = int(x_start_tilespan * tile_width)
+                y_start_pixel = int(y_start_tilespan * tile_height)
+                for j in range(y_start_pixel, y_start_pixel + tile_width):
+                    for k in range(x_start_pixel, x_start_pixel + tile_height):
+                        j0 = j - y_start_pixel
+                        k0 = k - x_start_pixel
+                        tile_map[j][k] = (i, (j0*tile_width + k0))
 
-        #for row in tile_map:
-        #    print(row)
-        self.tile_map = tile_map
+            #for row in tile_map:
+            #    print(row)
+            self.tile_map = tile_map
         return self.tile_map
 
 

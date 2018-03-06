@@ -12,7 +12,7 @@ def main():
     duration_ms = 0
 
     COLOR1 = [43634, 65535, 20000, 3500]
-    COLOR2 = DARK
+    COLOR2 = [0, 0, 0, 0]
 
     grid = [[[COLOR1, COLOR1, COLOR1, COLOR2, COLOR2, COLOR1, COLOR1, COLOR1],
              [COLOR1, COLOR1, COLOR2, COLOR2, COLOR2, COLOR2, COLOR1, COLOR1],

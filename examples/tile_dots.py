@@ -12,31 +12,33 @@ def main():
     num_tiles = 5 #depends on light, hardcoded for now
     (cols, rows) = t.get_canvas_dimensions(num_tiles)
     hue = 0
-    rainbow_colors = []
+    background_colors = []
     for row in range(rows):
         color_row = []
         for col in range(cols):
-            color_row.append((hue, 65535, 1000, 4500))
+            color_row.append((hue, 65535, 2000, 4900))
             hue += int(65535.0/(cols*rows))
-        rainbow_colors.append(color_row)
+        background_colors.append(color_row)
 
-    matrix = copy.deepcopy(rainbow_colors)
+    matrix = copy.deepcopy(background_colors)
     t.project_matrix(matrix, num_tiles, 2000)
     sleep(2)
 
-    duration_ms = 500
+    duration_ms = 150
 
+
+    dots=[]
+    max_dots=50
     while(True):
-        for dots in range(150):
-            matrix[choice(range(rows))][choice(range(cols))] = get_random_color()
-            t.project_matrix(matrix, num_tiles,duration_ms, rapid=True)
-            sleep(duration_ms/2000)
+        dot = [choice(range(rows)),choice(range(cols))]
+        dots.append(dot)
+        if len(dots) > max_dots:
+            old_dot = dots.pop(0)
+            matrix[int(old_dot[0])][int(old_dot[1])] = background_colors[int(old_dot[0])][int(old_dot[1])]
 
-        sleep(2)
-        matrix = copy.deepcopy(rainbow_colors)
-        t.project_matrix(matrix, num_tiles, 5000)
-
-
+        matrix[int(dot[0])][int(dot[1])] = get_random_color()
+        t.project_matrix(matrix, num_tiles,duration_ms, rapid=True)
+        sleep(duration_ms/2000)
 
 
 def cycle_row(matrix):
@@ -45,8 +47,10 @@ def cycle_row(matrix):
         new_matrix.append(row)
     return new_matrix
 
+
 def get_random_color():
-    return (randint(0,65535), randint(0,65535), randint(0,65535), randint(2500,9000))
+    return randint(0, 65535), randint(65535, 65535), randint(0, 65535), randint(2500, 9000)
+
 
 if __name__=="__main__":
     main()

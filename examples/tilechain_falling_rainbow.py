@@ -22,12 +22,13 @@ def main():
 
         t.project_matrix(rainbow_colors, num_tiles)
 
-        duration_ms = 150
+        duration_ms = 300
 
         while(True):
             rainbow_colors = cycle_row(rainbow_colors)
-            t.project_matrix(rainbow_colors, num_tiles, duration_ms)
-            sleep(duration_ms/2000.0)
+            t.project_matrix(rainbow_colors, num_tiles, duration_ms, rapid=True)
+            sleep(duration_ms/1000.0)
+
     else:
         print("No TileChain lights found.")
 
