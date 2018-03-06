@@ -6,9 +6,9 @@ def main():
     lan = LifxLAN()
     tilechain_lights = lan.get_tilechain_lights()
     if len(tilechain_lights) != 0:
-        t = lan.get_tilechain_lights()[0] #grab the first tilechain
+        #t = lan.get_tilechain_lights()[0] #grab the first tilechain
         #t = lan.get_device_by_name("Glider")
-        #t = TileChain("d0:73:d5:33:14:4c", "10.0.0.8", verbose=False)
+        t = TileChain("d0:73:d5:33:14:21", "192.168.1.143")
         num_tiles = 5 #depends on light, hardcoded for now
         (cols, rows) = t.get_canvas_dimensions(num_tiles)
         hue = 0
@@ -22,7 +22,7 @@ def main():
 
         t.project_matrix(rainbow_colors, num_tiles)
 
-        duration_ms = 500
+        duration_ms = 150
 
         while(True):
             rainbow_colors = cycle_row(rainbow_colors)

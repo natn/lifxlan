@@ -34,8 +34,8 @@ def main():
 
         sleep(2)
         matrix = copy.deepcopy(rainbow_colors)
-        t.project_matrix(matrix, num_tiles, 10000)
-        sleep(10)
+        t.project_matrix(matrix, num_tiles, 5000)
+
 
 
 

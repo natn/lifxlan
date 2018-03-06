@@ -7,20 +7,19 @@ from .msgtypes import GetTileState64, StateTileState64, SetTileState64, GetDevic
 class TileChain(Light):
     def __init__(self, mac_addr, ip_addr, service=1, port=56700, source_id=os.getpid(), verbose=False):
         super(TileChain, self).__init__(mac_addr, ip_addr, service, port, source_id, verbose)
+        self.GetDeviceChain_response = self.req_with_resp(GetDeviceChain, StateDeviceChain)
 
     # returns information about all tiles
     def get_tile_info(self):
-        response = self.req_with_resp(GetDeviceChain, StateDeviceChain)
         tiles = []
-        for tile in response.tile_devices:
+        for tile in self.GetDeviceChain_response.tile_devices:
             t = Tile(tile["user_x"], tile["user_y"], tile["width"], tile["height"], tile["device_version_vendor"], tile["device_version_product"], tile["device_version_version"], tile["firmware_build"], tile["firmware_version"])
             tiles.append(t)
-        return tiles[:response.total_count]
+        return tiles[:self.GetDeviceChain_response.total_count]
 
     # should return the number of tiles in the chain...right?
     def get_tile_count(self):
-        response = self.req_with_resp(GetDeviceChain, StateDeviceChain)
-        self.total_count = response.total_count
+        self.total_count = self.GetDeviceChain_response.total_count
         return self.total_count
 
     # danger zoooooone
@@ -51,7 +50,10 @@ class TileChain(Light):
                    "x": x,
                    "y": y,
                    "width": width}
-        self.req_with_ack(SetTileState64, payload)
+        if rapid:
+            self.fire_and_forget(SetTileState64, payload)
+        else:
+            self.req_with_ack(SetTileState64, payload)
 
     # shouldn't need the num_tiles parameter once we can correctly get num tiles
     def recenter_coordinates(self, num_tiles):
@@ -63,7 +65,7 @@ class TileChain(Light):
             self.set_tile_coordinates(tile_index, user_x, user_y)
 
     # ETC. for the num_tiles
-    def project_matrix(self, hsvk_matrix, num_tiles, duration = 0, default_color = (0, 0, 0, 0)):
+    def project_matrix(self, hsvk_matrix, num_tiles, duration = 0, default_color = (0, 0, 0, 0), rapid=False):
         canvas_x, canvas_y = self.get_canvas_dimensions(num_tiles)
         matrix_x = len(hsvk_matrix[0])
         matrix_y = len(hsvk_matrix)
@@ -84,7 +86,7 @@ class TileChain(Light):
                     tile_colors[tile_num][color_num] = hsvk_matrix[row][col]
 
         for (i, tile_color) in enumerate(tile_colors):
-           self.set_tile_colors(i, tile_color, duration=duration)
+           self.set_tile_colors(i, tile_color, duration=duration, rapid=rapid)
 
     ### HELPER FUNCTIONS
 

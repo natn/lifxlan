@@ -2,7 +2,7 @@
 # coding=utf-8
 import sys
 
-from lifxlan import LifxLAN
+import lifxlan
 
 
 def main():
@@ -13,18 +13,21 @@ def main():
     else:
         num_lights = int(sys.argv[1])
 
-    # instantiate LifxLAN client, num_lights may be None (unknown).
-    # In fact, you don't need to provide LifxLAN with the number of bulbs at all.
-    # lifx = LifxLAN() works just as well. Knowing the number of bulbs in advance 
-    # simply makes initial bulb discovery faster.
-    print("Discovering lights...")
-    lifx = LifxLAN(num_lights)
+    t = lifxlan.TileChain("d0:73:d5:33:14:21", "192.168.1.143", verbose=True)
+    print(t)
 
-    # get devices
-    devices = lifx.get_devices()
-    print("\nFound {} light(s):\n".format(len(devices)))
-    for d in devices:
-        print(d)
+    # # instantiate LifxLAN client, num_lights may be None (unknown).
+    # # In fact, you don't need to provide LifxLAN with the number of bulbs at all.
+    # # lifx = LifxLAN() works just as well. Knowing the number of bulbs in advance
+    # # simply makes initial bulb discovery faster.
+    # print("Discovering lights...")
+    # lifx = LifxLAN(num_lights)
+    #
+    # # get devices
+    # devices = lifx.get_devices()
+    # print("\nFound {} light(s):\n".format(len(devices)))
+    # for d in devices:
+    #     print(d)
 
 if __name__=="__main__":
     main()
