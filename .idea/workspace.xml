@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca6dc124-417a-455f-8413-41bd86c1e301" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/examples/plasma.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/examples/scratch.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/examples/tile_dots.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/examples/tile_invaders.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/examples/hello_world.py" afterPath="$PROJECT_DIR$/examples/hello_world.py" />
-      <change beforePath="$PROJECT_DIR$/examples/play.py" afterPath="$PROJECT_DIR$/examples/play.py" />
-      <change beforePath="$PROJECT_DIR$/examples/tilechain_falling_rainbow.py" afterPath="$PROJECT_DIR$/examples/tilechain_falling_rainbow.py" />
-      <change beforePath="$PROJECT_DIR$/lifxlan/light.py" afterPath="$PROJECT_DIR$/lifxlan/light.py" />
-      <change beforePath="$PROJECT_DIR$/lifxlan/tilechain.py" afterPath="$PROJECT_DIR$/lifxlan/tilechain.py" />
+      <change beforePath="$PROJECT_DIR$/examples/tile_dots.py" afterPath="$PROJECT_DIR$/examples/tile_dots.py" />
+      <change beforePath="$PROJECT_DIR$/examples/tile_invaders.py" afterPath="$PROJECT_DIR$/examples/tile_invaders.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,23 +15,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="device.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lifxlan/device.py">
+      <file leaf-file-name="tile_dots.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/tile_dots.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3127">
-              <caret line="159" column="28" lean-forward="false" selection-start-line="159" selection-start-column="28" selection-end-line="159" selection-end-column="28" />
+            <state relative-caret-position="700">
+              <caret line="28" column="15" lean-forward="true" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="errors.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lifxlan/errors.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="msgtypes.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lifxlan/msgtypes.py">
+      <file leaf-file-name="tile_invaders.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/examples/tile_invaders.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17793">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="375">
+              <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
               <folding>
-                <element signature="e#378#394#0" expanded="true" />
+                <element signature="e#0#21#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -47,22 +52,10 @@
       <file leaf-file-name="tilechain.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lifxlan/tilechain.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-200">
-              <caret line="43" column="8" lean-forward="false" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+            <state relative-caret-position="-3885">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scratch.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/scratch.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -72,56 +65,8 @@
         <entry file="file://$PROJECT_DIR$/lifxlan/light.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="275">
-              <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="34" />
+              <caret line="16" column="30" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="34" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tilechain_falling_rainbow.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/tilechain_falling_rainbow.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="28" column="22" lean-forward="false" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="play.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/play.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="13" column="11" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tile_dots.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/tile_dots.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tile_invaders.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/examples/tile_invaders.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -154,12 +99,17 @@
       <find>DARK</find>
       <find>BLUE</find>
       <find>response</find>
+      <find>COLOR2</find>
+      <find>True</find>
     </findStrings>
     <replaceStrings>
       <replace>tile_string</replace>
       <replace>DARK</replace>
       <replace>GREEN</replace>
       <replace>COLOR2</replace>
+      <replace>False</replace>
+      <replace>True</replace>
+      <replace>0</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -176,14 +126,16 @@
         <option value="$PROJECT_DIR$/lifxlan/lifxlan.py" />
         <option value="$PROJECT_DIR$/lifxlan/device.py" />
         <option value="$PROJECT_DIR$/examples/hello_world.py" />
-        <option value="$PROJECT_DIR$/examples/tilechain_falling_rainbow.py" />
-        <option value="$PROJECT_DIR$/lifxlan/tilechain.py" />
         <option value="$PROJECT_DIR$/lifxlan/light.py" />
         <option value="$PROJECT_DIR$/examples/plasma.py" />
         <option value="$PROJECT_DIR$/examples/scratch.py" />
         <option value="$PROJECT_DIR$/examples/invaders.py" />
         <option value="$PROJECT_DIR$/examples/play.py" />
         <option value="$PROJECT_DIR$/examples/dots.py" />
+        <option value="$PROJECT_DIR$/lifxlan/tilechain.py" />
+        <option value="$PROJECT_DIR$/examples/tilechain_falling_rainbow.py" />
+        <option value="$PROJECT_DIR$/examples/tile_dots.py" />
+        <option value="$PROJECT_DIR$/examples/tile_invaders.py" />
       </list>
     </option>
   </component>
@@ -255,7 +207,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.dots">
+  <component name="RunManager" selected="Python.tile_invaders">
     <configuration name="dots" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -274,42 +226,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="invaders" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/examples" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="lifxlan" />
-      <option name="SCRIPT_NAME" value="C:\Users\natn\PycharmProjects\lifxlan\examples\tile_invaders.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="plasma" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/examples" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="lifxlan" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/plasma.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="play" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -323,6 +239,42 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="lifxlan" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/play.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="tile_dots" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/examples" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lifxlan" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/tile_dots.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="tile_invaders" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/examples" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lifxlan" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/tile_invaders.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -349,17 +301,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.tilechain_falling_rainbow" />
       <item index="1" class="java.lang.String" itemvalue="Python.play" />
-      <item index="2" class="java.lang.String" itemvalue="Python.plasma" />
-      <item index="3" class="java.lang.String" itemvalue="Python.invaders" />
-      <item index="4" class="java.lang.String" itemvalue="Python.dots" />
+      <item index="2" class="java.lang.String" itemvalue="Python.dots" />
+      <item index="3" class="java.lang.String" itemvalue="Python.tile_invaders" />
+      <item index="4" class="java.lang.String" itemvalue="Python.tile_dots" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.dots" />
-        <item index="1" class="java.lang.String" itemvalue="Python.play" />
-        <item index="2" class="java.lang.String" itemvalue="Python.invaders" />
-        <item index="3" class="java.lang.String" itemvalue="Python.plasma" />
-        <item index="4" class="java.lang.String" itemvalue="Python.tilechain_falling_rainbow" />
+        <item index="0" class="java.lang.String" itemvalue="Python.tile_invaders" />
+        <item index="1" class="java.lang.String" itemvalue="Python.tile_dots" />
+        <item index="2" class="java.lang.String" itemvalue="Python.tilechain_falling_rainbow" />
+        <item index="3" class="java.lang.String" itemvalue="Python.dots" />
+        <item index="4" class="java.lang.String" itemvalue="Python.play" />
       </list>
     </recent_temporary>
   </component>
@@ -398,13 +350,28 @@
       <option name="project" value="LOCAL" />
       <updated>1520291730565</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Playing with tile support">
+      <created>1520299971530</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1520299971530</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Playing with tile support">
+      <created>1520307223461</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1520307223461</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="3769" height="2182" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13824393" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13824393" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -755,17 +722,7 @@
         <state relative-caret-position="400">
           <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
           <folding>
-            <element signature="e#37#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/tilechain_falling_rainbow.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="28" column="22" lean-forward="false" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#37#47#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -774,24 +731,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3127">
           <caret line="159" column="28" lean-forward="false" selection-start-line="159" selection-start-column="28" selection-end-line="159" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lifxlan/msgtypes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17793">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#378#394#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lifxlan/light.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -814,12 +753,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lifxlan/tilechain.py">
+    <entry file="file://$PROJECT_DIR$/lifxlan/errors.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-200">
-          <caret line="43" column="8" lean-forward="false" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lifxlan/msgtypes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17760">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#378#394#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -834,6 +781,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/examples/tilechain_falling_rainbow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1025">
+          <caret line="41" column="39" lean-forward="false" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/examples/play.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
@@ -844,10 +801,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lifxlan/light.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="16" column="30" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lifxlan/tilechain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3885">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/examples/tile_dots.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        <state relative-caret-position="700">
+          <caret line="28" column="15" lean-forward="true" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
@@ -856,8 +831,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/tile_invaders.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        <state relative-caret-position="375">
+          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>

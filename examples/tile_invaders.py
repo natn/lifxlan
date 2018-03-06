@@ -1,7 +1,5 @@
 from lifxlan import *
 from random import randint
-
-
 from time import sleep
 
 
@@ -11,40 +9,43 @@ def main():
 
     duration_ms = 0
 
-    COLOR1 = [43634, 65535, 20000, 3500]
-    COLOR2 = [0, 0, 0, 0]
+    palette = {0: [0, 0, 0, 0],
+               1: [43634, 65535, 30000, 3500]
+                }
 
-    grid = [[[COLOR1, COLOR1, COLOR1, COLOR2, COLOR2, COLOR1, COLOR1, COLOR1],
-             [COLOR1, COLOR1, COLOR2, COLOR2, COLOR2, COLOR2, COLOR1, COLOR1],
-             [COLOR1, COLOR2, COLOR2, COLOR2, COLOR2, COLOR2, COLOR2, COLOR1],
-             [COLOR2, COLOR2, COLOR1, COLOR2, COLOR2, COLOR1, COLOR2, COLOR2],
-             [COLOR2, COLOR2, COLOR2, COLOR2, COLOR2, COLOR2, COLOR2, COLOR2],
-             [COLOR1, COLOR2, COLOR1, COLOR2, COLOR2, COLOR1, COLOR2, COLOR1],
-             [COLOR2, COLOR1, COLOR1, COLOR1, COLOR1, COLOR1, COLOR1, COLOR2],
-             [COLOR1, COLOR2, COLOR1, COLOR1, COLOR1, COLOR1, COLOR2, COLOR1]],
+    num_frames = 2
+    invader_matrix = \
+           [[[1, 1, 1, 0, 0, 1, 1, 1],
+             [1, 1, 0, 0, 0, 0, 1, 1],
+             [1, 0, 0, 0, 0, 0, 0, 1],
+             [0, 0, 1, 0, 0, 1, 0, 0],
+             [0, 0, 0, 0, 0, 0, 0, 0],
+             [1, 0, 1, 0, 0, 1, 0, 1],
+             [0, 1, 1, 1, 1, 1, 1, 0],
+             [1, 0, 1, 1, 1, 1, 0, 1]],
 
-            [[COLOR1, COLOR1, COLOR1, COLOR2, COLOR2, COLOR1, COLOR1, COLOR1],
-             [COLOR1, COLOR1, COLOR2, COLOR2, COLOR2, COLOR2, COLOR1, COLOR1],
-             [COLOR1, COLOR2, COLOR2, COLOR2, COLOR2, COLOR2, COLOR2, COLOR1],
-             [COLOR2, COLOR2, COLOR1, COLOR2, COLOR2, COLOR1, COLOR2, COLOR2],
-             [COLOR2, COLOR2, COLOR2, COLOR2, COLOR2, COLOR2, COLOR2, COLOR2],
-             [COLOR1, COLOR1, COLOR2, COLOR1, COLOR1, COLOR2, COLOR1, COLOR1],
-             [COLOR1, COLOR2, COLOR1, COLOR2, COLOR2, COLOR1, COLOR2, COLOR1],
-             [COLOR2, COLOR1, COLOR2, COLOR1, COLOR1, COLOR2, COLOR1, COLOR2]]]
+            [[1, 1, 1, 0, 0, 1, 1, 1],
+             [1, 1, 0, 0, 0, 0, 1, 1],
+             [1, 0, 0, 0, 0, 0, 0, 1],
+             [0, 0, 1, 0, 0, 1, 0, 0],
+             [0, 0, 0, 0, 0, 0, 0, 0],
+             [1, 1, 0, 1, 1, 0, 1, 1],
+             [1, 0, 1, 0, 0, 1, 0, 1],
+             [0, 1, 0, 1, 1, 0, 1, 0]]]
 
-
-    while (True):
-        for g in [0, 1]:
-            tilebox = []
-            for i in range(8):
-                for j in range(8):
-                    tilebox.append(grid[g][i][j])
+    while True:
+        for frame in range(num_frames):
+            sprite = []
+            for x in range(8):
+                for y in range(8):
+                        sprite.append(palette[invader_matrix[frame][x][y]])
             for index in range(num_tiles):
-                t.set_tile_colors(index, tilebox, duration_ms)
+                t.set_tile_colors(index, sprite, duration_ms)
             sleep(1)
 
+
 def get_random_color():
-    return (randint(0, 65535), randint(0, 65535), randint(0, 65535), randint(2500, 9000))
+    return randint(0, 65535), randint(0, 65535), randint(0, 65535), randint(2500, 9000)
 
 
 if __name__ == "__main__":

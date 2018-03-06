@@ -1,9 +1,8 @@
 from lifxlan import *
 from random import randint, choice
-import timeit
-
 from time import sleep
 import copy
+
 
 def main():
     lan = LifxLAN()
@@ -26,10 +25,9 @@ def main():
 
     duration_ms = 150
 
-
     dots=[]
     max_dots=50
-    while(True):
+    while True:
         dot = [choice(range(rows)),choice(range(cols))]
         dots.append(dot)
         if len(dots) > max_dots:
