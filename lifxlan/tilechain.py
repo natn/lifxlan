@@ -17,7 +17,6 @@ class TileChain(Light):
             tiles.append(t)
         return tiles[:self.GetDeviceChain_response.total_count]
 
-    # should return the number of tiles in the chain...right?
     def get_tile_count(self):
         self.total_count = self.GetDeviceChain_response.total_count
         return self.total_count
@@ -55,17 +54,17 @@ class TileChain(Light):
         else:
             self.req_with_ack(SetTileState64, payload)
 
-    # shouldn't need the num_tiles parameter once we can correctly get num tiles
-    def recenter_coordinates(self, num_tiles):
-        x_vals, y_vals = self.get_xy_vals(num_tiles)
+    def recenter_coordinates(self):
+        num_tiles = self.get_tile_count()
+        x_vals, y_vals = self.get_xy_vals()
         x_vals = self.center_axis(x_vals)
         y_vals = self.center_axis(y_vals)
         centered_coordinates = list(zip(x_vals, y_vals))
         for (tile_index, (user_x, user_y)) in enumerate(centered_coordinates):
             self.set_tile_coordinates(tile_index, user_x, user_y)
 
-    # ETC. for the num_tiles
-    def project_matrix(self, hsvk_matrix, num_tiles, duration = 0, default_color = (0, 0, 0, 0), rapid=False):
+    def project_matrix(self, hsvk_matrix, duration = 0, default_color = (0, 0, 0, 0), rapid=False):
+        num_tiles = self.get_tile_count()
         canvas_x, canvas_y = self.get_canvas_dimensions(num_tiles)
         matrix_x = len(hsvk_matrix[0])
         matrix_y = len(hsvk_matrix)
@@ -90,9 +89,9 @@ class TileChain(Light):
 
     ### HELPER FUNCTIONS
 
-    # will be able to remove num_tiles once we can get it programmatically
-    def get_xy_vals(self, num_tiles):
+    def get_xy_vals(self):
         tiles = self.get_tile_info()
+        num_tiles = self.get_tile_count()
         x_vals = []
         y_vals = []
         for tile in tiles[:num_tiles]:
@@ -120,8 +119,8 @@ class TileChain(Light):
         axis_vals = [(-1*smallest_val) + val for val in axis_vals]
         return axis_vals
 
-    # will be able to remove num_tiles once we can get it programmatically
-    def get_canvas_dimensions(self, num_tiles):
+    def get_canvas_dimensions(self):
+        num_tiles = self.get_tile_count()
         x_vals, y_vals = self.get_xy_vals(num_tiles)
         min_x = min(x_vals)
         max_x = max(x_vals)
@@ -135,6 +134,13 @@ class TileChain(Light):
         canvas_y = int(y_tilespan * tile_height)
         return (canvas_x, canvas_y)
 
+    def get_tile_map(self):
+        num_tiles = self.get_tile_count()
+        tile_width = 8 #TO DO: get these programmatically for each light from the tile info
+        tile_height = 8 #TO DO: get these programmatically for each light from the tile info
+        (x, y) = self.get_canvas_dimensions(num_tiles)
+        #print(x, y)
+        tile_map = [[0 for i in range(x)] for j in range(y)]
     # THIS DOESN'T WORK WITH GAPS
     def get_tile_map(self, num_tiles):
         try:
