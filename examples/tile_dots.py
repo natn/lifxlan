@@ -9,7 +9,7 @@ def main():
 
     t = TileChain("d0:73:d5:33:14:21", "192.168.1.143")
     num_tiles = 5 #depends on light, hardcoded for now
-    (cols, rows) = t.get_canvas_dimensions(num_tiles)
+    (cols, rows) = t.get_canvas_dimensions()
     hue = 0
     background_colors = []
     for row in range(rows):
