@@ -5,7 +5,7 @@ from time import sleep
 
 def main():
     t = TileChain("d0:73:d5:33:14:21", "192.168.1.143")
-    num_tiles = 5  # depends on light, hardcoded for now
+    num_tiles = t.get_tile_count()
 
     duration_ms = 0
 
